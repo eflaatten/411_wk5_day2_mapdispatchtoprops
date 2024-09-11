@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+
 import {
     Button,
     TextField,
@@ -6,6 +7,7 @@ import {
     DialogContent,
     DialogTitle
 } from '@mui/material'
+
 
 class AddCar extends Component {
     state = {
@@ -31,7 +33,9 @@ class AddCar extends Component {
         delete payload.open
         console.log("THE CAR", payload)
         // add this.props.addCar function here
+        this.props.addCar(payload)
         // also add this.setState to close the dialog
+        this.setState({ open: false })
     }
 
     componentDidUpdate = (prevProps, prevState) => {
