@@ -8,7 +8,6 @@ const cars = (state = [], action) => {
         case 'ADD_CAR':
             return [...state, action.value]
         case 'REMOVE_CAR':
-            //create a copy of state and then splice the index out of it
             let cars = [...state]
             cars.splice(action.value, 1)
             return cars
